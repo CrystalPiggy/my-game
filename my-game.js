@@ -1,71 +1,60 @@
-// constants to set up the environment
-
-const CANVAS_WIDTH = 500;
-
-const CANVAS_HEIGHT = 500;
-
-const BACKGROUND_COLOR = 'lightblue';
-
-
-
-// location of the player
-
-var playerX = 100;
-
-var playerY = 50;
-
-var name = "sam";
-
 function setup() {
-  createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
-  //fill('grey');
-  //arc(200, 50, 100, 80, 0, PI, CHORD);
+  
+createCanvas(400, 400);
+
 }
 
-// loops forever
+
 function draw() {
-  // Draw background
-  background(BACKGROUND_COLOR);
   
-  // Draw player
-  drawPlayer(playerX, playerY);
-  
-  // Player movement
-  if (keyIsDown(LEFT_ARROW)) {
-    playerX--;
-  }
+background('orangered');
+	
+	
+noStroke();
+	
+	
+fill('orange');
+	
+ellipse(200, 200, 400, 400);
+	
+	
+fill('gold');
+	
+quad(200, 100, 300, 200, 200, 300, 100, 200);
+	
+	
+fill('white');
+	
+ellipse(200, 200, 130, 80);
+	
+	
+fill('gray');
+	
+ellipse(200, 200, 50, 50);
+	
+	
+fill('gold');
+	
+triangle(200, 100, 125, 200, 275, 200);
 
-  else if (keyIsDown(RIGHT_ARROW)) {
-    playerX++;
-  }
-
-  else if (keyIsDown(UP_ARROW)) {
-    playerY--;
-  }
-
-  else if (keyIsDown(DOWN_ARROW)) {
-    playerY++;
-  }
+	
+if (mouseIsPressed) {
+	
+fill('black');
+	
+ellipse(200, 200, 130, 80);
+		
+	
+fill('gold');
+	
+ellipse(200, 196, 130, 80);
+	
+	
+	
 }
+	
+	
+//fill('gray');
+	//ellipse(200, 175, 200, 75);
 
-// draws a snowman
-function drawPlayer(pX, pY) {
-  //replace this...
-  
-	noStroke();
-  fill('white');
-  
-  // body
-  ellipse(pX, pY, 50, 50);
-  ellipse(pX, pY+50, 75, 75);
-  ellipse(pX, pY+100, 100, 100);
-  
-  // eyes
-  fill('black');
-  ellipse(pX-10, pY-5, 10, 10);
-  ellipse(pX+10, pY-5, 10, 10);
-  
-  // nose
-  fill('orange');
-  triangle(pX, pY, pX+10, pY+5, pX-10, pY+10);
 }
